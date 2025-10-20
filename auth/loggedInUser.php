@@ -7,6 +7,6 @@ if (isset($_SESSION["loggedIn"])){
         return;
     }
 }else{
-    echo "Please log in"; 
+    header("Location: paystack.php");
 }
 ?>
