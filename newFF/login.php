@@ -61,7 +61,7 @@ $token = bin2hex(random_bytes(16));
 echo $token . "<br/>"; 
 $token_exp = time() + 30;
 echo time(); 
-$loggeredInUser = ["fn"=>$user='fn', "ln"=>$user='ln', 'token' =>$token, "token_exp" =>$token_exp];
+$loggedInUser = ["fn"=>$user='fn', "ln"=>$user='ln', 'token' =>$token, "token_exp" =>$token_exp];
 ?>
 
 <DOCTYPE html>

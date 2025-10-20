@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set("Africa/lagos");
-echo date("F l j g:i a"); 
+echo date("F l j g:i a") ."<br>"; 
 echo __DIR__;
 require __DIR__ . '/vendor/autoload.php';
 

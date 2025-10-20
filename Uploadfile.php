@@ -18,11 +18,25 @@ if (isset($_POST['upload'])){
 } 
  //composer
 
+if (isset($_POST['upload'])) {
+    $file = $_FILES['image'];
+    print_r($file);
+    try {
+        $result = $cloudinary->uploadApi()->upload($file['tmp_name']);
+        if ($result) {
+            echo "<img src='$result[secure_url]' />";
+        }
+    } catch (\Exception $th) {
+        echo $th->getMessage() . "Something went wrong";
+    }
+}
 
 $uploadFile = $_FILE['picture'];
 $acceptFile = ['jpg', "png", "svg", "bmp", "webp"];
 $ext = $file_info['extension'];
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

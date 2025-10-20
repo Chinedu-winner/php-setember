@@ -18,7 +18,7 @@
         <img src="image/120px-Sample_User_Icon.png" width='500px' height="500px" alt="">
         <form action="image/120px-Sample_User_Icon.png">
             <input name="download-pix" type="file">
-            <button>Change Profile Pix</button>
+            <button>Change</button>
         </form>
         <div>
             <h1>Name: User name</h1>
