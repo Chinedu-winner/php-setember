@@ -1,7 +1,7 @@
 <?php
 session_start();
-$user = $_SESSION['userDetails'];
-print_r($user);
+// $user = $_SESSION['userDetails'];
+// print_r($user);
 
 $database = mysqli_connect('localhost', 'root', '', 'bank-app');
 
@@ -14,7 +14,7 @@ if($database){
 
 // $query = "SELECT * FROM users";
 $query = "SELECT email, password, first_name, last_name FROM users";
-$response = mysqli_query($database, $query); 
+// $response = mysqli_query($database, $query); 
 
 if (isset($_POST['login'])){
 $email = $POST['email'];
