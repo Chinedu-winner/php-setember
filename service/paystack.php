@@ -8,25 +8,25 @@ require '../vendor/autoload.php';
 
 use Dotenv\Dotenv;
 
-$dotenv = Dotenv::createImmutable(__DIR__); 
+$dotenv = Dotenv::createImmutable(__DIR__ ."/../"); 
 $dotenv->load();
 
-$authUser = $_SESSION['loggenIn'];
-$email = $_SESSION['email'];
+// $authUser = $_SESSION['loggenIn'];
+// $email = $_SESSION['email'];
 //Implementing Paystack
 $amount = $_POST['amount'];
-echo $amount; 
+// echo $amount; 
 
 $secret_key = $_ENV['PAYSTACK_SECRET_KEY']; 
 //This url is used to initalize payment 
 try{
     $url = "https://api.paystack.co/transaction/initialize";
     $fields = [
-        'email'=> $email,
-        'amount'=> $amount, 
+        // 'email'=> $email,
+        // 'amount'=> $amount, 
         'callback'=> 'http://localhost:8000/callback.php',
     ]; 
-    echo $email;  
+    // echo $email;  
     $fields_string = http_build_query($fields); 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
@@ -43,8 +43,8 @@ print_r($result);
 curl_close($ch);
 
 $response = json_decode($result, true);
-$pay_url = $response['data']['authorization_url'];
-echo $pay_url; 
+// $pay_url = $response['data']['authorization_url'];
+// echo $pay_url; 
 // header("location: $pay_url"); 
 
 }catch(\Exception $th){
