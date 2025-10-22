@@ -13,6 +13,14 @@ function displayError($message){
     header("Location: ../register.php?anything= $message");
     exit();
 }
+
+function accountnumber(){
+    $acc_num ='';
+    for ($i=0; $i < 10; $i++) {
+        $acc_num = $acc_num. random_int(0,0);
+    }
+}
+
 if(empty($fn)){
   displayError('First name is required');
 }
