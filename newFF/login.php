@@ -1,6 +1,6 @@
 <?php
 session_start();
-// $user = $_SESSION['userDetails'];
+// $user = $_SESfSION['userDetails'];
 // print_r($user);
 
 $database = mysqli_connect('localhost', 'root', '', 'bank-app');
@@ -17,8 +17,8 @@ $query = "SELECT email, password, first_name, last_name FROM users";
 // $response = mysqli_query($database, $query); 
 
 if (isset($_POST['login'])){
-$email = $POST['email'];
-$password= $_POST['password'];
+    $email = $POST['email'];
+    $password= $_POST['password'];
 
 //------------ A QUERY TO GET A SINGLE USER -------------
     $query = "SELECT email, password, role FROM users WHERE email='$email'";
@@ -62,6 +62,7 @@ echo $token . "<br/>";
 $token_exp = time() + 30;
 echo time(); 
 $loggedInUser = ["fn"=>$user='fn', "ln"=>$user='ln', 'token' =>$token, "token_exp" =>$token_exp];
+ $_SESSION['loggenIn'] = $loggedInUser;
 ?>
 
 <DOCTYPE html>

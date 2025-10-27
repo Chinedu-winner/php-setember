@@ -21,5 +21,10 @@
         <input name="amount" type="text">
         <button name="addFund">Add Funds</button>
     </form>
+    <h1>Transfer Money</h1>
+    <form action="service/paystack.php" method="post">
+        <input name="amount" type="text">
+        <button name="addFund">Add Funds</button>
+    </form>
 </body>
 </html>

@@ -42,7 +42,6 @@ if($result['status']==true){
     $amount = $result['data']['amount'];
     $new_amount = $user['amount'] + $amount;
 try{
-    echo "---------------New amount---------"; 
     $query= "UPDATE user SET amount = '$new_amount' WHERE email = '$email'";
     $query_amount_resp = mysqli_query($database, $query);
     if ($query_amount_resp) {

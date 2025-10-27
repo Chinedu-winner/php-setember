@@ -11,7 +11,7 @@ use Dotenv\Dotenv;
 $dotenv = Dotenv::createImmutable(__DIR__ ."/../"); 
 $dotenv->load();
 
-$authUser = $_SESSION['loggedIn'];
+$authUser = $_SESSION['loggenIn'];
 //Implementing Paystack
 // $email = $_SESSION['email'];
 $amount = $_POST['amount'];
