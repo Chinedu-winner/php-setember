@@ -10,4 +10,4 @@ if($user){
 }else{
     header("Location: ../index.php?acc_err=The account does not exit");
 }
-?>
+?> 

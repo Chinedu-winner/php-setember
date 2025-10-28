@@ -16,7 +16,7 @@ function displayError($message){
 
 function accountnumber(){
     $acc_num ='';
-    for ($i=0; $i < 10; $i++) {
+    for ($i=0; $i < 10; $i++){
         $acc_num = $acc_num. random_int(0,0);
     }
 }
