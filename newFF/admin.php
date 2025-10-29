@@ -9,24 +9,13 @@ session_start()
   <title>Admin Dashboard</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body {
-      background-color: #f8f9fa;
-     }
-    .sidebar {
-      height: 100vh;
-      background-color: #343a40;
-      padding-top: 20px;
-    }
-    .sidebar a {
-      color: white;
-      text-decoration: none;
-      padding: 10px;
-      display: block;
-    }
-    .sidebar a:hover {
-      background-color: #495057;
-      border-radius: 5px;
-    }
+    body {background-color: #f8f9fa;}
+
+    .sidebar {height: 100vh; background-color: #343a40; padding-top: 20px;}
+
+    .sidebar a {color: white;text-decoration: none; padding: 10px; display: block;}
+
+    .sidebar a:hover {background-color: #495057; border-radius: 5px;}
   </style>
 </head>
 <body>
@@ -79,7 +68,5 @@ session_start()
         </div>
       </main>
     </div>
-  </div>
-
-</body>
+  </div></body>
 </html>

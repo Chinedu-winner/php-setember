@@ -90,7 +90,7 @@ if($database){
     displayError("Database not connect"); 
 }
 
-$sql_query = "INSERT INTO users (first_name, last_name, email, password, phone_number, address, role, dob)
+$sql_query = "INSERT INTO manger_tb (first_name, last_name, email, password, phone_number, address, role, dob)
 VALUES ('$fn','$ln', '$email', '$hased', '$phone', '$role', '$dob')";
 $response = mysqli_query($database, $sql_query); 
 if($response){

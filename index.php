@@ -11,7 +11,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Document</title>
 </head>
-
 <body>
     <?php include "components/navbar.html" ?>
     </nav>
@@ -23,6 +22,16 @@
     </form>
     <h1>Transfer Money</h1>
     <form action="service/paystack.php" method="post">
+        <?php if (!isset($GET['acc_info'])){
+            echo "
+            <input name= amount placeholder='Enter the amount you want to send'/>
+            <div class='alert alert-success'>Make transfer </div>";
+        }?>
+        <?php if (isset($_GET['acc_err'])){
+            echo "<div class='alert alert-danger'>$_GET[acc_err]</div>";
+        }
+
+        ?>
         <input name="amount" type="text">
         <button name="addFund">Add Funds</button>
     </form>
